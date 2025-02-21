@@ -1,0 +1,15 @@
+# Practice Task here
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set_palette('colorblind')
+
+
+# Sample data
+labels = ['Football', 'Basketball', 'Netball', 'Badminton']
+sizes = [15, 30, 45, 10]  # The percentages of each category
+
+plt.pie(sizes, labels=labels, autopct='%1.0f%%', startangle=45,)
+plt.axis('equal')  # Equal aspect ratio ensures the pie chart is circular.
+plt.title('Sample Pie Chart')
+plt.show()
