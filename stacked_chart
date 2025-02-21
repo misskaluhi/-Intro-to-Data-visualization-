@@ -23,4 +23,5 @@ plt.title("Geological Crust Layer Thickness Over Time", fontsize = 14, weight = 
 plt.xlabel('Year')
 plt.ylabel('Layer Thickness (in meters)')
 plt.legend(title='Crust Layer')
+sns.despine()
 plt.show()
