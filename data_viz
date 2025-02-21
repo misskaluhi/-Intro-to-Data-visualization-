@@ -1,0 +1,22 @@
+# prompt: Set the figure size to (12, 6)
+# Set the bar colour to "darkblue"
+# Set x-axis tick marks rotation to -45 Hint: Check plt.xticks(rotation = -45
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set()
+
+# Sample data
+
+# Extracting X and Y lists from the data
+x = ['Audi', 'BMW', 'Mercedes-Benz', 'Mitsubishi', 'Renault']  # Car brands
+y = [419, 636, 820, 306, 438]  # Number of listings
+
+# Creating the bar chart with adjustments
+plt.figure(figsize=(12, 6))  # Set figure size
+plt.bar(x, y, color='darkblue')  # Set bar color
+plt.xlabel('Brand')
+plt.ylabel('Cars Listings')
+plt.title('Car Listings by Brand')
+plt.xticks(rotation=-45)  # Rotate x-axis tick marks
+plt.show()
