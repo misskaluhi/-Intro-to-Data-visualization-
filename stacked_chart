@@ -1,0 +1,26 @@
+# Practice Task here
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set()
+
+
+# Sample data: Simulating thickness of different geological crust layers over years
+dates = pd.date_range('2020-01-01', periods=6, freq='Y')
+data = {
+    'Sedimentary': np.random.randint(10, 50, size=6),  # Simulated values
+    'Metamorphic': np.random.randint(5, 30, size=6),   # Simulated values
+    'Igneous': np.random.randint(20, 60, size=6)       # Simulated values
+}
+
+df = pd.DataFrame(data, index=dates)
+
+# Plotting the stacked area chart
+df.plot(kind='area', stacked=True, figsize=(12, 6))
+plt.title("Geological Crust Layer Thickness Over Time", fontsize = 14, weight = "bold")
+plt.xlabel('Year')
+plt.ylabel('Layer Thickness (in meters)')
+plt.legend(title='Crust Layer')
+plt.show()
